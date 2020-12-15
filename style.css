@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/images/background.png');
+}
+
+.dynamic-height{
+    max-height: calc(100vh - 300px);
+ }
+
+ .shadow-1 {
+     box-shadow: 0 0 2px 1px rgba(0,0,0,0.3);
+ }
+
+ .btn-xs {
+    padding: .6em .4rem .4rem;
+    font-size: .875rem;
+    line-height: 0.9;
+    border-radius: .2rem;
+  }

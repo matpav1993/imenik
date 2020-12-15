@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Telefonski imenik - kontakti</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="uredivanje-kontakta.js"></script>
+    <link href="../style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Telefonski imenik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="../popis-kontakta/popis-kontakta.html">Početna</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a id="uredivanje-natrag-button" class="btn btn-outline-secondary" style="position: fixed;top: 62px;left: 10px;" role="button"
+        data-bs-toggle="button" title="Povratak">
+        <img src="..//assets/icons/back.svg" class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
+        Natrag
+    </a>
+
+    <div class="container mt-5">
+        <div class="card">
+            <h5 class="card-header bg-primary text-white">Uređivanje kontakta</h5>
+            <div class="card-body">
+                <input class="id" hidden type="text" value="">
+                <div class="form-group">
+                    <input id="uredivanje-ime" class="form-control firstName mb-2" required type="text" placeholder="Ime" />
+                </div>
+                <div class="form-group">
+                    <input id="uredivanje-prezime" class="form-control lastName mb-2" required type="text" placeholder="Prezime" />
+                </div>
+                <div class="form-group">
+                    <input id="uredivanje-telefon" class="form-control addPhone mb-2" required type="text" placeholder="Telefon" />
+                </div>
+                <div class="text-center mb-3 mt-2">
+                    <a href="#" class="btn btn-secondary addNewPhone my-2 p-2 float-start">Dodaj novi telefon</a>
+                </div>
+                <div class="form-group">
+                    <input id="uredivanje-email" class="form-control email mb-2" type="text" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <textarea id="uredivanje-opis" class="form-control" placeholder="Opis" rows="4"></textarea>
+                </div>
+                <a href="..//detalji-kontakta/detalji-kontakta.html" class="btn btn-primary float-start shadow-1 mt-2"
+                    role="button" data-bs-toggle="button" title="Spremi"><img src="..//assets/icons/save.svg"
+                    class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
+                    Spremi
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

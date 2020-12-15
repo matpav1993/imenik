@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Telefonski imenik - kontakti</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="dodavanje-kontakta.js"></script>
+    <link href="../style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Telefonski imenik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="../popis-kontakta/popis-kontakta.html">Početna</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <a href="../popis-kontakta/popis-kontakta.html" class="btn btn-outline-secondary"
+        style="position: fixed;top: 62px;left: 10px;" role="button" data-bs-toggle="button" title="Povratak">
+        <img src="..//assets/icons/back.svg" class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
+        Natrag
+    </a>
+
+    <div class="container mt-5">
+        <div class="card">
+            <h5 class="card-header bg-primary text-white">Dodavanje kontakta</h5>
+            <div class="card-body">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Ime" id="dodavanje-ime">
+                    <label for="floatingInput">Ime</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Prezime" id="dodavanje-prezime">
+                    <label for="floatingInput">Prezime</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Telefon" id="dodavanje-telefon">
+                    <label for="floatingInputValue">Telefon</label>
+                </div>
+                <div id="popis-telefona">
+                </div>
+                <div class="form-floating mb-3 mt-2">
+                    <button onclick="dodajNoviTelefon()" class="btn btn-secondary btn-sm addNewPhone my-2 p-2">Dodaj novi telefon</button>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" placeholder="name@example.com" id="dodavanje-email">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Opis kontakta" style="height: 100px"
+                        id="dodavanje-opis"></textarea>
+                    <label for="floatingTextarea2">Opis</label>
+                </div>
+                <div class="d-grid gap-2 d-md-block">
+                    <button onclick="dodajKontakt()" class="btn btn-primary my-2" data-bs-toggle="button"
+                        title="Dodaj kontakt"><img src="..//assets/icons/add_contact.svg" style="margin: -2px 10px 0 0 !important;">Dodaj kontakt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

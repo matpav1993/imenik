@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Telefonski imenik - kontakti</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="popis-kontakta.js"></script>
+    <link href="../style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Telefonski imenik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="../popis-kontakta/popis-kontakta.html">Početna</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3">
+
+        <div class="mb-3">
+            <a href="../dodavanje-kontakta/dodavanje-kontakta.html" class="btn btn-success">Dodaj novi kontakt</a>
+            <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+            <label class="btn btn-primary float-end" for="btn-check">Sortirano po Imenu: ASC</label>
+        </div>
+
+        <div class="mb-3">
+            <form class="d-flex">
+                <input class="form-control" type="search" placeholder="Traži" aria-label="Traži">
+            </form>
+        </div>
+
+        <div class="card">
+            <h5 class="card-header bg-primary text-white">Popis kontakata</h5>
+
+            <div class="mx-4 my-4">
+                <div class="card list-group overflow-auto dynamic-height" id="lista-kontakta">
+                </div>
+            </div>
+            <div class="row">
+                <div class="list-group">
+                </div>
+            </div>
+
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
