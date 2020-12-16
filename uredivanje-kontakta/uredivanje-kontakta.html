@@ -29,13 +29,13 @@
         </div>
     </nav>
 
-    <a id="uredivanje-natrag-button" class="btn btn-outline-secondary" style="position: fixed;top: 62px;left: 10px;" role="button"
+    <a id="uredivanje-natrag-button" class="btn btn btn-outline-light" style="position: fixed;top: 62px;left: 10px;" role="button"
         data-bs-toggle="button" title="Povratak">
-        <img src="..//assets/icons/back.svg" class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
+        <img src="../assets/icons/back.svg" class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
         Natrag
     </a>
 
-    <div class="container mt-5">
+    <div class="container mt-2 w-50">
         <div class="card">
             <h5 class="card-header bg-primary text-white">Uređivanje kontakta</h5>
             <div class="card-body">
@@ -49,8 +49,10 @@
                 <div class="form-group">
                     <input id="uredivanje-telefon" class="form-control addPhone mb-2" required type="text" placeholder="Telefon" />
                 </div>
+                <div id="popis-telefona">
+                </div>
                 <div class="text-center mb-3 mt-2">
-                    <a href="#" class="btn btn-secondary addNewPhone my-2 p-2 float-start">Dodaj novi telefon</a>
+                    <button id="dodaj-novi-telefon" class="btn btn-secondary addNewPhone my-2 p-2 float-start">Dodaj novi telefon</button>
                 </div>
                 <div class="form-group">
                     <input id="uredivanje-email" class="form-control email mb-2" type="text" placeholder="Email" />
@@ -58,11 +60,11 @@
                 <div class="form-group">
                     <textarea id="uredivanje-opis" class="form-control" placeholder="Opis" rows="4"></textarea>
                 </div>
-                <a href="..//detalji-kontakta/detalji-kontakta.html" class="btn btn-primary float-start shadow-1 mt-2"
-                    role="button" data-bs-toggle="button" title="Spremi"><img src="..//assets/icons/save.svg"
+                <btn id="spremi-kontakt-button" class="btn btn-primary float-start shadow-1 mt-2"
+                    role="button" data-bs-toggle="button" title="Spremi"><img src="../assets/icons/save.svg"
                     class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
                     Spremi
-                </a>
+            </btn>
             </div>
         </div>
     </div>

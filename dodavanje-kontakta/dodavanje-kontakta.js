@@ -12,6 +12,7 @@ function dodajNoviTelefon() {
     input.classList.add('form-control');
     input.type = 'text';
     input.placeholder = 'placeholder';
+    input.classList.add('dodatni-telefon')
 
     let label = document.createElement("label");
     label.innerHTML = 'Telefon';
@@ -35,17 +36,24 @@ function dodajNoviTelefon() {
 
 function dodajKontakt() {
 
+    let telefoni = [];
+    telefoni.push(document.getElementById('dodavanje-telefona').value);
+
+    Array.from(document.getElementsByClassName('dodatni-telefon'))
+            .forEach((tel) => {
+        telefoni.push(tel.value);
+    });
+
     let kontakt = {
         Id: generateId(),
         Ime: document.getElementById("dodavanje-ime").value,
         Prezime: document.getElementById("dodavanje-prezime").value,
-        Telefon: document.getElementById("dodavanje-telefon").value,
+        Telefon: telefoni,
         Email: document.getElementById("dodavanje-email").value,
         Opis: document.getElementById("dodavanje-opis").value,
     }
 
     addKontakt(kontakt);
-
     window.location = '../detalji-kontakta/detalji-kontakta.html?id=' + kontakt.Id;
 
 }

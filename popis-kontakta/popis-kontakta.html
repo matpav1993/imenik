@@ -29,22 +29,25 @@
         </div>
     </nav>
 
-    <div class="container my-3">
+    <div class="container mt-3 w-50">
 
         <div class="mb-3">
-            <a href="../dodavanje-kontakta/dodavanje-kontakta.html" class="btn btn-success">Dodaj novi kontakt</a>
+            <a href="../dodavanje-kontakta/dodavanje-kontakta.html" class="btn btn-warning" style="color: #fff;text-shadow: 0px 0px 2.5px #000;">Dodaj novi kontakt</a>
             <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-            <label class="btn btn-primary float-end" for="btn-check">Sortirano po Imenu: ASC</label>
+            <label id="sortirano-po-imenu" class="btn btn-primary float-end" for="btn-check">Sortirano po imenu: ASC</label>
         </div>
 
         <div class="mb-3">
-            <form class="d-flex">
-                <input class="form-control" type="search" placeholder="Traži" aria-label="Traži">
-            </form>
+            <div class="d-flex">
+                <input id="pretraga-input" class="form-control me-2" type="search" placeholder="Pojam za pretragu" aria-label="Pretraga">
+                <button id="ocisti-pretragu-button" class="btn btn-danger me-1 d-none">Ukloni</button>
+                <button id="pretraga-button" class="btn btn-success">Traži</button>
+            </div>
         </div>
 
         <div class="card">
             <h5 class="card-header bg-primary text-white">Popis kontakata</h5>
+
 
             <div class="mx-4 my-4">
                 <div class="card list-group overflow-auto dynamic-height" id="lista-kontakta">
