@@ -127,7 +127,7 @@ function napraviListuKontakta(kontakti) {
 
 function napraviImenikPrazanAlert() {
     let node = document.createElement("p");
-    node.classList.add('alert', 'alert-danger');
+    node.classList.add('alert', 'alert-warning', 'mb-0');
 
     node.appendChild(document.createTextNode('Nema rezultata za prikaz.'));
     document.getElementById("lista-kontakta").appendChild(node);
