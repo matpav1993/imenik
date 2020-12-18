@@ -54,7 +54,11 @@ function dodajNoviTelefon(telefonskiBroj) {
 
     let button = document.createElement("button");
     button.innerHTML = 'Obriši';
-    button.classList.add('btn', 'btn-danger', 'btn-xs', 'mt-2');
+    button.classList.add('btn', 'btn-danger', 'btn-xs', 'mt-1');
+
+    button.onclick = function () {
+        document.getElementById("popis-telefona").removeChild(outerDiv);
+    };
     
     outerDiv.appendChild(input);
     outerDiv.appendChild(label);
@@ -62,6 +66,7 @@ function dodajNoviTelefon(telefonskiBroj) {
     outerDiv.appendChild(innerDiv);
 
     document.getElementById("popis-telefona").appendChild(outerDiv);
+    
 
 }
 

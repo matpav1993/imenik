@@ -35,6 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location = '../popis-kontakta/popis-kontakta.html?id=' + kontakt.Id;
     }
 
+    document.getElementById("modal-delete-odustani").onclick = function () {
+        window.location = '../detalji-kontakta/detalji-kontakta.html?id=' + kontakt.Id;
+    }
+    document.getElementById("modal-delete-odustani-iks").onclick = function () {
+        window.location = '../detalji-kontakta/detalji-kontakta.html?id=' + kontakt.Id;
+    }
+
 });
 
 function getKontakti() {

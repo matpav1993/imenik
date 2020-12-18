@@ -8,16 +8,13 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="popis-kontakta.js"></script>
     <link href="../style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">Telefonski imenik</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -29,39 +26,48 @@
         </div>
     </nav>
 
-    <div class="container mt-3 w-50">
+    <div class="row m-2">
 
-        <div class="mb-3">
-            <a href="../dodavanje-kontakta/dodavanje-kontakta.html" class="btn btn-warning" style="color: #fff;text-shadow: 0px 0px 2.5px #000;">Dodaj novi kontakt</a>
-            <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-            <label id="sortirano-po-imenu" class="btn btn-primary float-end" for="btn-check">Sortirano po imenu: ASC</label>
-        </div>
-
-        <div class="mb-3">
-            <div class="d-flex">
-                <input id="pretraga-input" class="form-control me-2" type="search" placeholder="Pojam za pretragu" aria-label="Pretraga">
-                <button id="ocisti-pretragu-button" class="btn btn-danger me-1 d-none">Ukloni</button>
-                <button id="pretraga-button" class="btn btn-success">Traži</button>
+        <div class="col-12 col-lg-6 offset-lg-3">
+        
+            <div class="mb-3">
+                <a href="../dodavanje-kontakta/dodavanje-kontakta.html" class="btn btn-warning w-mobile-100 mb-2 mb-lg-0"
+                    style="color: #fff;text-shadow: 0px 0px 2.5px #000;">Dodaj novi kontakt</a>
+                <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                <label id="sortirano-po-imenu" class="btn btn-primary float-end w-mobile-100 mb-2 mb-lg-0" for="btn-check">Sortirano po imenu:
+                    ASC</label>
             </div>
-        </div>
-
-        <div class="card">
-            <h5 class="card-header bg-primary text-white">Popis kontakata</h5>
-
-
-            <div class="mx-4 my-4">
-                <div class="card list-group overflow-auto dynamic-height" id="lista-kontakta">
-                </div>
-            </div>
-            <div class="row">
-                <div class="list-group">
+        
+            <div class="card mb-3" style="background-color: transparent;border: 1px solid transparent;">
+                <div>
+                    <div class="d-flex">
+                        <input id="pretraga-input" class="form-control me-2" type="search" placeholder="Pojam za pretragu"
+                            aria-label="Pretraga">
+                        <button id="ocisti-pretragu-button" class="btn btn-danger me-1 d-none">Ukloni</button>
+                        <button id="pretraga-button" class="btn btn-success">Traži</button>
+                    </div>
                 </div>
             </div>
 
-            </ul>
-        </div>
+            <div class="card px-0">
+                <h5 class="card-header bg-primary text-white">Popis kontakata</h5>
+        
+        
+                <div class="mx-4 my-4">
+                    <div class="card list-group overflow-auto dynamic-height" id="lista-kontakta">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="list-group">
+                    </div>
+                </div>
+        
+            </div>
 
+        </div>
     </div>
+
+
 
 </body>
 

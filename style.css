@@ -18,3 +18,29 @@ body {
     line-height: 0.9;
     border-radius: .2rem;
   }
+
+  .user-circle {
+    background-color: rgb(1, 85, 153);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 2px;
+    color: #fff;
+}
+
+.user-name {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  .w-mobile-100 {
+    width: 100%;
+  }
+}
+

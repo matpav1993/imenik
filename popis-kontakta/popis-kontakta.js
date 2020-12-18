@@ -81,12 +81,42 @@ function filtrirajKontaktePoKeywordu(kontakti) {
 function napraviListuKontakta(kontakti) {
     kontakti.forEach(kontakt => {
 
+        let imePrezime = (kontakt.Ime.length > 0) ? kontakt.Ime + ' ' : '';
+        imePrezime += (kontakt.Prezime.length > 0) ? kontakt.Prezime : '';
+
+        let inicijali = (kontakt.Ime.length > 0) ? kontakt.Ime[0] : '';
+        inicijali += (kontakt.Prezime.length > 0) ? kontakt.Prezime[0] : '';
+
         let node = document.createElement("button");
 
         node.classList.add('list-group-item');
         node.classList.add('list-group-item-action');
 
-        node.appendChild(document.createTextNode(kontakt.Ime + ' ' + kontakt.Prezime));
+        let div1 = document.createElement('div');
+        div1.classList.add('row', 'p-0');
+
+        let div2 = document.createElement('div');
+        div2.classList.add('col-2', 'pt-1', 'col-lg-1');
+
+        div1.appendChild(div2);
+
+        let div3 = document.createElement('div');
+        div3.classList.add('user-circle');
+        div3.appendChild(document.createTextNode(inicijali));
+
+        div2.appendChild(div3);
+
+        let div4 = document.createElement('div');
+        div4.classList.add('col-10', 'col-lg-11', 'p-0');
+
+        let div5 = document.createElement('span');
+        div5.classList.add('user-name');
+        div5.appendChild(document.createTextNode(imePrezime));
+
+        div4.appendChild(div5);
+        div1.appendChild(div4);
+        node.appendChild(div1);
+
         node.onclick = function () {
             window.location = '../detalji-kontakta/detalji-kontakta.html?id=' + kontakt.Id;
         };
@@ -132,19 +162,4 @@ function filterKontakti(keyword) {
 
 function saveKontakti(kontakti) {
     localStorage.setItem('kontakti', JSON.stringify(kontakti));
-}
-
-function firstletter(kontakti)
-{
-    // "<li class='list-group-item d-flex flex-row'>" + 
-    // "<div class='p-2 round-icon rounded-circle'>" + <val.Ime.charAt(0).ToUpperCase() +
-    // val.Prezime.charAt(0).ToUpperCase() + "</div>" +
-    // "div class='text-break w-75 p-2'><h4 class='mt-2 float-start'>" + val.Ime
-    // + " " + val.Prezime + "</h4></div>" +
-    // "<div class='text-break w-25'><a title='Pogledaj više' class='view btn btn-primary float-end'
-    // kontakt.Id='" + val.id + "'><src=..//assets/icons/info.svg
-    // </a></div>" +
-    // "</li>";
-
-
 }

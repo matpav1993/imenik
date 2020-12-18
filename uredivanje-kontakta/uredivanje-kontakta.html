@@ -8,16 +8,17 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="uredivanje-kontakta.js"></script>
     <link href="../style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">Telefonski imenik</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -35,7 +36,9 @@
         Natrag
     </a>
 
-    <div class="container mt-2 w-50">
+    <div class="row p-2 m-0">
+        <div class="col-12 col-lg-6 mt-3 offset-lg-3">
+    <div class="mt-4">
         <div class="card">
             <h5 class="card-header bg-primary text-white">Uređivanje kontakta</h5>
             <div class="card-body">
@@ -52,7 +55,7 @@
                 <div id="popis-telefona">
                 </div>
                 <div class="text-center mb-3 mt-2">
-                    <button id="dodaj-novi-telefon" class="btn btn-secondary addNewPhone my-2 p-2 float-start">Dodaj novi telefon</button>
+                    <button id="dodaj-novi-telefon" class="btn btn-secondary btn-sm addNewPhone my-2 p-2 float-start">Dodaj novi telefon</button>
                 </div>
                 <div class="form-group">
                     <input id="uredivanje-email" class="form-control email mb-2" type="text" placeholder="Email" />
@@ -68,6 +71,8 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </body>
 
 </html>
