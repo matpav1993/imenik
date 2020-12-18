@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    setTimeout(function(){ 
+        let spinner = document.getElementById("detalji-spinner");
+        let body = document.getElementById("detalji-body");
+
+        spinner.classList.remove('d-block');
+        spinner.classList.add('d-none');
+
+        body.classList.remove('d-none');
+        body.classList.add('d-block');
+    }, 1500);
+
     let urlParams = new URLSearchParams(window.location.search);
     let id = urlParams.get('id');
 

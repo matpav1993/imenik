@@ -12,9 +12,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <img src="../assets/images/agenda.svg" class="logo">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-1">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Telefonski imenik</a>
+            <a class="navbar-brand ms-4 ps-2" href="../popis-kontakta/popis-kontakta.html">Telefonski imenik</a>
             <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,50 +36,50 @@
         Natrag
     </a>
 
-    <div class="row p-2 m-0">
-        <div class="col-12 col-lg-6 mt-3 offset-lg-3">
+    <div class="row p-2 pt-4">
+        <div class="col-12 col-lg-6 mt-3 offset-lg-3 pt-4">
 
-    <div class="mt-4" >
-        <div class="card">
-            <h5 class="card-header bg-primary text-white">Dodavanje kontakta</h5>
-            <div class="card-body">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="Ime" id="dodavanje-ime">
-                    <label for="floatingInput">Ime</label>
+                <div class="card">
+                    <h5 class="card-header bg-primary text-white">Dodavanje kontakta</h5>
+                    <div class="card-body">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Ime" id="dodavanje-ime">
+                            <label for="floatingInput">Ime</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Prezime" id="dodavanje-prezime">
+                            <label for="floatingInput">Prezime</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Telefon" id="dodavanje-telefona">
+                            <label for="floatingInputValue">Telefon</label>
+                        </div>
+                        <div id="popis-telefona">
+                        </div>
+                        <div class="form-floating mb-3 mt-2">
+                            <button onclick="dodajNoviTelefon()"
+                                class="btn btn-secondary btn-sm addNewPhone my-2 p-2">Dodaj novi telefon</button>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" placeholder="name@example.com"
+                                id="dodavanje-email">
+                            <label for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Opis kontakta" style="height: 100px"
+                                id="dodavanje-opis"></textarea>
+                            <label for="floatingTextarea2">Opis</label>
+                        </div>
+                        <div class="d-grid gap-2 d-md-block float-start">
+                            <button onclick="dodajKontakt()" class="btn btn-primary my-2" data-bs-toggle="button"
+                                title="Dodaj kontakt"><img src="../assets/icons/add_contact.svg"
+                                    style="margin: -2px 10px 0 0 !important;">Dodaj kontakt</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="Prezime" id="dodavanje-prezime">
-                    <label for="floatingInput">Prezime</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="Telefon" id="dodavanje-telefona">
-                    <label for="floatingInputValue">Telefon</label>
-                </div>
-                <div id="popis-telefona">
-                </div>
-                <div class="form-floating mb-3 mt-2">
-                    <button onclick="dodajNoviTelefon()" class="btn btn-secondary btn-sm addNewPhone my-2 p-2">Dodaj novi telefon</button>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" placeholder="name@example.com" id="dodavanje-email">
-                    <label for="floatingInput">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Opis kontakta" style="height: 100px"
-                        id="dodavanje-opis"></textarea>
-                    <label for="floatingTextarea2">Opis</label>
-                </div>
-                <div class="d-grid gap-2 d-md-block float-start">
-                    <button onclick="dodajKontakt()" class="btn btn-primary my-2" data-bs-toggle="button"
-                        title="Dodaj kontakt"><img src="../assets/icons/add_contact.svg" style="margin: -2px 10px 0 0 !important;">Dodaj kontakt</button>
-                </div>
-            </div>
         </div>
-    </div>
-</div>
-</div>
-
     </div>
 
 </body>

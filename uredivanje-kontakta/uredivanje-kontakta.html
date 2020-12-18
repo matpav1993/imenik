@@ -12,9 +12,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <img src="../assets/images/agenda.svg" class="logo">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-1">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Telefonski imenik</a>
+            <a class="navbar-brand ms-4 ps-2" href="../popis-kontakta/popis-kontakta.html">Telefonski imenik</a>
             <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,49 +31,64 @@
         </div>
     </nav>
 
-    <a id="uredivanje-natrag-button" class="btn btn btn-outline-light" style="position: fixed;top: 62px;left: 10px;" role="button"
-        data-bs-toggle="button" title="Povratak">
+    <a id="uredivanje-natrag-button" class="btn btn btn-outline-light" style="position: fixed;top: 62px;left: 10px;"
+        role="button" data-bs-toggle="button" title="Povratak">
         <img src="../assets/icons/back.svg" class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
         Natrag
     </a>
 
-    <div class="row p-2 m-0">
+    <div class="row pt-4 m-0">
         <div class="col-12 col-lg-6 mt-3 offset-lg-3">
-    <div class="mt-4">
-        <div class="card">
-            <h5 class="card-header bg-primary text-white">Uređivanje kontakta</h5>
-            <div class="card-body">
-                <input class="id" hidden type="text" value="">
-                <div class="form-group">
-                    <input id="uredivanje-ime" class="form-control firstName mb-2" required type="text" placeholder="Ime" />
+            <div class="mt-4">
+                <div class="card">
+                    <h5 class="card-header bg-primary text-white">Uređivanje kontakta</h5>
+                    <div class="card-body">
+                        <div id="uredivanje-spinner" class="text-center p-5">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        <div id="uredivanje-body" class="d-none">
+
+                            <input class="id" hidden type="text" value="">
+                            <div class="form-group">
+                                <input id="uredivanje-ime" class="form-control firstName mb-2" required type="text"
+                                    placeholder="Ime" />
+                            </div>
+                            <div class="form-group">
+                                <input id="uredivanje-prezime" class="form-control lastName mb-2" required type="text"
+                                    placeholder="Prezime" />
+                            </div>
+                            <div class="form-group">
+                                <input id="uredivanje-telefon" class="form-control addPhone mb-2" required type="text"
+                                    placeholder="Telefon" />
+                            </div>
+                            <div id="popis-telefona">
+                            </div>
+                            <div class="text-center mb-3 mt-2">
+                                <button id="dodaj-novi-telefon"
+                                    class="btn btn-secondary btn-sm addNewPhone my-2 p-2 float-start">Dodaj novi
+                                    telefon</button>
+                            </div>
+                            <div class="form-group">
+                                <input id="uredivanje-email" class="form-control email mb-2" type="text"
+                                    placeholder="Email" />
+                            </div>
+                            <div class="form-group">
+                                <textarea id="uredivanje-opis" class="form-control" placeholder="Opis"
+                                    rows="4"></textarea>
+                            </div>
+                            <btn id="spremi-kontakt-button" class="btn btn-primary float-start shadow-1 mt-2"
+                                role="button" data-bs-toggle="button" title="Spremi"><img src="../assets/icons/save.svg"
+                                    class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
+                                Spremi
+                            </btn>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input id="uredivanje-prezime" class="form-control lastName mb-2" required type="text" placeholder="Prezime" />
-                </div>
-                <div class="form-group">
-                    <input id="uredivanje-telefon" class="form-control addPhone mb-2" required type="text" placeholder="Telefon" />
-                </div>
-                <div id="popis-telefona">
-                </div>
-                <div class="text-center mb-3 mt-2">
-                    <button id="dodaj-novi-telefon" class="btn btn-secondary btn-sm addNewPhone my-2 p-2 float-start">Dodaj novi telefon</button>
-                </div>
-                <div class="form-group">
-                    <input id="uredivanje-email" class="form-control email mb-2" type="text" placeholder="Email" />
-                </div>
-                <div class="form-group">
-                    <textarea id="uredivanje-opis" class="form-control" placeholder="Opis" rows="4"></textarea>
-                </div>
-                <btn id="spremi-kontakt-button" class="btn btn-primary float-start shadow-1 mt-2"
-                    role="button" data-bs-toggle="button" title="Spremi"><img src="../assets/icons/save.svg"
-                    class="mx-2 ml-0" style="margin-top: -3px;margin-left: 6px !important;">
-                    Spremi
-            </btn>
             </div>
         </div>
     </div>
-</div>
-</div>
 </body>
 
 </html>
